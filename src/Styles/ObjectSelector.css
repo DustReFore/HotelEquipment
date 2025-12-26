@@ -1,0 +1,66 @@
+.section-selector {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.button-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.button-list li {
+    color: black;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.button-list li:hover {
+    color: chocolate;
+    transition: color 0.3s;
+}
+
+.info-block {
+  margin-top: 30px;
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 1200px; /* чуть шире, чтобы уместить текст + фото */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;              /* включаем flex */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-block h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.info-block ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.info-block li {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #374151;
+  font-weight: 350;
+}
+
+.info-image {
+  max-width: 800px; /* ограничиваем ширину изображения */
+  border-radius: 8px;
+}

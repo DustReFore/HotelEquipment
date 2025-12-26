@@ -1,0 +1,36 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import "../Styles/Navbar.css";
+
+function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <nav className="navbar">
+            <div className="navbar-left">
+                <Link to="/" className="navbar-logo">HOTEL EQUIPMENT</Link>
+            </div>
+
+            <div className="burger" onClick={() => setIsOpen(!isOpen)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul className={`navbar-center ${isOpen ? "open" : ""}`}>
+                <li><Link to="/">HOME</Link></li>
+                <li><Link to="/Catalog">CATALOG</Link></li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/information">INFORMATION</Link></li>
+                <li><Link to="/Contact">CONTACT</Link></li>
+            </ul>
+
+            <div className="navbar-right">
+                <span>Belgrade@HotelEquipment.rs</span>
+                <span>8 800 555 3535</span>
+            </div>
+        </nav>
+    );
+}
+
+export default Navbar;
