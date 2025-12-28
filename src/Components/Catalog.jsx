@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "../Styles/Catalog.css";
+
 import bedImage from "../Assets/bed.jpg";
 import carpetImage from "../Assets/carpet.jpg";
 import doorsImage from "../Assets/doors.jpg";
@@ -8,66 +10,27 @@ import lampImage from "../Assets/lamp.jpg";
 import postersImage from "../Assets/posters.jpg";
 import textileImage from "../Assets/textile.jpg";
 
-const catalogItems = [
-  {
-    title: "КОРПУСНАЯ МЕБЕЛЬ",
-    image: furnitureImage,
-    subitems: [],
-  },
-  {
-    title: "СПАЛЬНОЕ МЕСТО",
-    image: bedImage,
-    subitems: ["Матрас", "Основание", "Топпер"],
-  },
-  {
-    title: "ДЕКОРАТИВНЫЙ ТЕКСТИЛЬ",
-    image: textileImage,
-    subitems: [],
-  },
-  {
-    title: "СВЕТИЛЬНИКИ",
-    image: lampImage,
-    subitems: ["Абажуры", "Black & White", "Light", "Slim"],
-  },
-  {
-    title: "ПОСТЕРЫ И КАРТИНЫ",
-    image: postersImage,
-    subitems: [],
-  },
-  {
-    title: "ДОП ОБОРУДОВАНИЕ",
-    image: equipmentImage,
-    subitems: [],
-  },
-  {
-    title: "ДВЕРИ",
-    image: doorsImage,
-    subitems: [],
-  },
-  {
-    title: "КОВРОЛИН",
-    image: carpetImage,
-    subitems: [],
-  },
-];
-
 function Catalog() {
+  const categories = [
+    { id: "furniture", name: "КОРПУСНАЯ МЕБЕЛЬ", image: furnitureImage, subitems: [] },
+    { id: "bed", name: "СПАЛЬНОЕ МЕСТО", image: bedImage, subitems: ["Матрас", "Основание", "Топпер"] },
+    { id: "textile", name: "ДЕКОРАТИВНЫЙ ТЕКСТИЛЬ", image: textileImage, subitems: [] },
+    { id: "lamp", name: "СВЕТИЛЬНИКИ", image: lampImage, subitems: ["Абажуры", "Black & White", "Light", "Slim"] },
+    { id: "posters", name: "ПОСТЕРЫ И КАРТИНЫ", image: postersImage, subitems: [] },
+    { id: "equipment", name: "ДОП ОБОРУДОВАНИЕ", image: equipmentImage, subitems: [] },
+    { id: "doors", name: "ДВЕРИ", image: doorsImage, subitems: [] },
+    { id: "carpet", name: "КОВРОЛИН", image: carpetImage, subitems: [] }
+  ];
+
   return (
-    <div className="catalog-page">
+    <div className="catalog">
       <h1>КАТАЛОГ</h1>
       <div className="catalog-grid">
-        {catalogItems.map((item, index) => (
-          <div key={index} className="catalog-card">
-            <img src={item.image} alt={item.title} />
-            <h2>{item.title}</h2>
-            {item.subitems.length > 0 && (
-              <ul>
-                {item.subitems.map((sub, i) => (
-                  <li key={i}>{sub}</li>
-                ))}
-              </ul>
-            )}
-          </div>
+        {categories.map(cat => (
+          <Link key={cat.id} to={`/catalog/${cat.id}`} className="catalog-card">
+            <img src={cat.image} alt={cat.name} />
+            <h3>{cat.name}</h3>
+          </Link>
         ))}
       </div>
     </div>

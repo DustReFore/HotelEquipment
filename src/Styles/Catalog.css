@@ -1,14 +1,8 @@
-.catalog-page {
+.catalog {
   padding: 60px 20px;
   background-color: #f8f8f8;
   text-align: center;
-  height: 91.7vh;
-}
-
-.catalog-page h1 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #1f2937;
+  min-height: 91.7vh;
 }
 
 .catalog-grid {
@@ -25,6 +19,8 @@
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s;
+  text-decoration: none;
+  color: black;
 }
 
 .catalog-card:hover {
@@ -37,22 +33,4 @@
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
-}
-
-.catalog-card h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #111827;
-}
-
-.catalog-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.catalog-card li {
-  font-size: 16px;
-  color: #374151;
-  margin-bottom: 6px;
 }
