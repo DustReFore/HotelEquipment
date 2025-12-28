@@ -19,10 +19,10 @@ function Navbar() {
 
             <ul className={`navbar-center ${isOpen ? "open" : ""}`}>
                 <li><Link to="/">HOME</Link></li>
-                <li><Link to="/Catalog">CATALOG</Link></li>
+                <li><Link to="/catalog">CATALOG</Link></li>
                 <li><Link to="/about">ABOUT</Link></li>
                 <li><Link to="/information">INFORMATION</Link></li>
-                <li><Link to="/Contact">CONTACT</Link></li>
+                <li><Link to="/contact">CONTACT</Link></li>
             </ul>
 
             <div className="navbar-right">
