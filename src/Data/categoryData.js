@@ -28,10 +28,14 @@ import smallTopperImage from "../Assets/CategoryAssets/small-topper.jpg";
 import standartTopperImage from "../Assets/CategoryAssets/standart-topper.jpg";
 import luxTopperImage from "../Assets/CategoryAssets/lux-topper.jpg";
 
+// textile images
+import textileImage from "../Assets/CategoryAssets/textile-image.jpg";
+
 const categoryData = {
     furniture: {
         title: "КОРПУСНАЯ МЕБЕЛЬ",
         description: "Шкафы, тумбы, столы, ТВ‑стойки и другие элементы интерьера.",
+        id: 1,
         items: [
             {
                 name: "Шкаф 3-х дверный",
@@ -98,6 +102,7 @@ const categoryData = {
     bed: {
         title: "СПАЛЬНОЕ МЕСТО",
         description: "Кровати, матрасы, основания и топперы для комфортного сна.",
+        id: 1,
         items: [
             // mattresses
             {
@@ -157,8 +162,11 @@ const categoryData = {
         ]
     },
     textile: {
-        title: "ДЕКОРАТИВНЫЙ ТЕКСТИЛЬ",
-        description: "Шторы, покрывала, подушки и другие текстильные изделия.",
+        title_1: "ДЕКОРАТИВНЫЙ ТЕКСТИЛЬ",
+        image: textileImage,
+        title_2: "Саше, декоративные подушки и портьер",
+        description: "В уютном номере каждая деталь имеет значение. Декоративный текстиль — это не просто украшение интерьера, а важный элемент гостеприимства, который создает атмосферу комфорта и гармонии. Один из наиболее важных элементов номера – качественные портьеры.Стиль и гармония — сочетание фактур и оттенков с обивкой мебели подчеркивает дизайн номера, делая его целостным и продуманным.Функциональность — правильно подобранный текстиль визуально корректирует пространство, скрывая особенности планировки, а также служит дополнительной шумоизоляцией, поглощая шумы.",
+        id: 2,
         items: [
 
         ]

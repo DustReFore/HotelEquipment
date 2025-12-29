@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Styles/Navbar.css";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
+    }, [isOpen]);
 
     return (
         <nav className="navbar">
@@ -23,7 +26,10 @@ function Navbar() {
                 <li><Link to="/about">ABOUT</Link></li>
                 <li><Link to="/information">INFORMATION</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
+                <li><Link to="/cart">CART</Link></li>
             </ul>
+
+            {isOpen && <div className="navbar-overlay" onClick={() => setIsOpen(false)}></div>}
 
             <div className="navbar-right">
                 <span>Belgrade@HotelEquipment.rs</span>

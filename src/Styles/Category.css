@@ -1,3 +1,7 @@
+/* ------------------------- */
+/*         category          */
+/* ------------------------- */
+
 .category-container {
     background-color: white;
     padding: 60px 20px;
@@ -7,8 +11,8 @@
 
 .category-container h1 {
     font-size: 32px;
-    color: #1f2937; /* тёмно-серый */
-    font-weight: 600;
+    color: #1f2937;
+    font-weight: 400;
     max-width: 1400px;
     text-align: left;
     margin: 0 auto;
@@ -19,7 +23,7 @@
 .category-container p {
     font-size: 18px;
     height: 50px;
-    color: #374151; /* серый */
+    color: #374151;
     max-width: 1400px;
     text-align: left;
     margin: 0 auto;
@@ -53,7 +57,7 @@
 .category-card h3 {
     font-size: 18px;
     margin-bottom: 8px;
-    color: #111827; /* почти чёрный */
+    color: #111827;
     height: 60px;
     width: 300px;
     border-bottom: 1px solid #cecece;
@@ -63,7 +67,7 @@
 
 .category-card p {
     font-size: 14px;
-    color: #4b5563; /* серый */
+    color: #4b5563;
     height: 32px;
     width: 300px;
     border-bottom: 1px solid #cecece;
@@ -96,7 +100,7 @@
 
 .category-actions button {
     padding: 8px 16px;
-    background-color: chocolate; /* красная кнопка */
+    background-color: chocolate;
     color: white;
     border: none;
     cursor: pointer;
@@ -104,5 +108,56 @@
 }
 
 .category-actions button:hover {
-    background-color: rgb(189, 94, 26); /* чуть темнее при наведении */
+    background-color: rgb(189, 94, 26);
+}
+
+/* ------------------------- */
+/*       category info       */
+/* ------------------------- */
+
+.category-info {
+    background-color: white;
+    text-align: left;
+    height: 91vh;
+    padding: 20px;
+}
+
+.category-info h1 {
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-info h2 {
+    font-size: 28px;
+    color: #1f2937;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-info p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #374151;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Изображение по центру*/
+.category-info img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    max-height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
 }

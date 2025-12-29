@@ -24,6 +24,18 @@
     text-align: left;
 }
 
+.catalog-card:hover {
+    transform: translateY(-5px);
+}
+
+.catalog h1 {
+    margin: 0 0 10px 10px;
+    font-size: 28px;
+    font-weight: 400;
+    color: black;
+    padding-bottom: 20px;
+}
+
 .catalog-card h3 {
     margin: 0 0 10px 10px;
     font-size: 24px;
