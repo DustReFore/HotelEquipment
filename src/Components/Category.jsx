@@ -1,39 +1,6 @@
 import { useParams } from "react-router-dom";
 import "../Styles/Category.css";
-
-import wardrobe3doorImage from "../Assets/CategoryAssets/wardrobe-3door.jpg";
-import wardrobe3doorWithHandleImage from "../Assets/CategoryAssets/wardrobe-3door-handle.jpg";
-import wardrobe2doorImage from "../Assets/CategoryAssets/wardrobe-2door.jpg";
-import wardrobe2doorWithHandleImage from "../Assets/CategoryAssets/wardrobe-2door-handle.jpg";
-
-const categoryData = {
-    furniture: {
-        title: "КОРПУСНАЯ МЕБЕЛЬ",
-        description: "Шкафы, тумбы, столы, ТВ‑стойки и другие элементы интерьера.",
-        items: [
-            {
-                name: "Шкаф 3-х дверный",
-                size: "1200 x 600 x 2200 мм",
-                image: wardrobe3doorImage
-            },
-            {
-                name: "Шкаф 3-х дверный с ручкой профиль",
-                size: "1200 x 450 x 2050 мм",
-                image: wardrobe3doorWithHandleImage
-            },
-            {
-                name: "Шкаф 2-х дверный",
-                size: "800 х 600 х 2050 мм",
-                image: wardrobe2doorImage
-            },
-            {
-                name: "Шкаф 2-х дверный с ручкой профиль",
-                size: "900 x 450 x 2050 мм",
-                image: wardrobe2doorWithHandleImage
-            },
-        ],
-    },
-};
+import categoryData from "../Data/categoryData";
 
 function Category() {
     const { category } = useParams();
@@ -49,7 +16,7 @@ function Category() {
             <p>{current.description}</p>
             <div className="category-grid">
                 {current.items.map((item, index) => (
-                    <div key={index} className="category-card">
+                    <div key={index} className="category-card">w
                         <img src={item.image} alt={item.name} />
                         <h3>{item.name}</h3>
                         <p>Размер: {item.size}</p>

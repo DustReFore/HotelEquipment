@@ -28,7 +28,9 @@ function Catalog() {
       <div className="catalog-grid">
         {categories.map(cat => (
           <Link key={cat.id} to={`/catalog/${cat.id}`} className="catalog-card">
-            <img src={cat.image} alt={cat.name} />
+            <div className="catalog-card-image">
+              <img src={cat.image} alt={cat.name} />
+            </div>
             <h3>{cat.name}</h3>
           </Link>
         ))}

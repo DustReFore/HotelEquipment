@@ -11,7 +11,7 @@
     font-weight: bold;
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .navbar-center {
@@ -23,7 +23,7 @@
 .navbar-center a {
     color: white;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -35,6 +35,9 @@
 .navbar-right {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 /* Бургер-кнопка */
