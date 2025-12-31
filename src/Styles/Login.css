@@ -1,0 +1,87 @@
+/* overlay для затемнения и размытия */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* само окно */
+.login-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.login-modal label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.login-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.login-modal h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-modal form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+}
+
+.login-modal p {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.login-modal form button {
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px auto 0 auto;
+    width: 50%;
+}
+
+.login-modal form button:hover {
+    background: #555;
+    transition: background 0.3s ease;
+}

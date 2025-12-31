@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../Context/AuthContext";
+import Login from "./Login.jsx";
 import "../Styles/Navbar.css";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const { user, logout } = useContext(AuthContext);
+    const [isLoginOpen, setIsLoginOpen] = useState(false);
     useEffect(() => {
         document.body.style.overflow = isOpen ? "hidden" : "auto";
     }, [isOpen]);
@@ -27,7 +31,10 @@ function Navbar() {
                 <li><Link to="/information">INFORMATION</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/cart">CART</Link></li>
+                <li><button onClick={() => setIsLoginOpen(true)}>LOG IN</button></li>
             </ul>
+
+            <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
 
             {isOpen && <div className="navbar-overlay" onClick={() => setIsOpen(false)}></div>}
 
