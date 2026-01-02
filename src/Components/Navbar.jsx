@@ -31,7 +31,11 @@ function Navbar() {
                 <li><Link to="/information">INFORMATION</Link></li>
                 <li><Link to="/contact">CONTACT</Link></li>
                 <li><Link to="/cart">CART</Link></li>
-                <li><button onClick={() => setIsLoginOpen(true)}>LOG IN</button></li>
+                {user ? (
+                    <Link to="/profile">PROFILE</Link>
+                ) : (
+                    <li><button onClick={() => setIsLoginOpen(true)}>LOGIN</button></li>
+                )}
             </ul>
 
             <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />

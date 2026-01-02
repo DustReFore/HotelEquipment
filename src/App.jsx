@@ -10,6 +10,7 @@ import CategoryPage from "./Pages/CategoryPage";
 import CartPage from "./Pages/CartPage"
 import ProtectedRoute from "./Components/ProtectedRoute";
 import AdminPanel from "./Components/AdminPanel";
+import ProfilePage from "./Pages/ProfilePage";
 
 import "./Styles/Cart.css";
 
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/catalog/:category" element={<CategoryPage />} />
                     <Route path="/cart" element={<CartPage />}></Route>
+                    <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/admin" element={
                         <ProtectedRoute requiredRole="admin">
                             <AdminPanel />
